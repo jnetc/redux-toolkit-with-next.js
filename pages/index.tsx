@@ -20,13 +20,11 @@ const conversation = ['Newest on top', 'Newest on bottom', 'Off'];
 const reading = ['Show on the right', 'Show on the bottom', 'Center', 'Hide'];
 
 const Home: NextPage = () => {
-  // const theme = useSelector((state: RootState) => state.themeReducer.theme);
   const message = useSelector(
     (state: RootState) => state.noticeReducer.message
   );
   const dispatch = useDispatch();
-
-  let { setTheme } = useThemeContext();
+  const { setTheme } = useThemeContext();
 
   const darkmode = (val: boolean) => {
     dispatch(switchTheme(val ? 'dark' : 'light'));

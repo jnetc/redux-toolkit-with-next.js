@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Provider } from 'react-redux';
 import { GlobalStyle } from '@Styles/global';
-import { themes } from '@Themes';
+import { themes } from '@Styles/themes';
 import { store } from 'redux/store';
 import {
   useState,
@@ -32,16 +32,6 @@ export const useThemeContext = () => {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState(state.theme);
-  // useEffect(() => {
-  //   let getTheme = document.documentElement.dataset.theme;
-  //   if (getTheme !== 'light') {
-  //     document.documentElement.setAttribute('data-theme', 'light');
-  //   } else {
-  //     document.documentElement.setAttribute('data-theme', 'dark');
-  //   }
-  // }, []);
-
-  console.log('_app', theme);
 
   return (
     <Theme.Provider

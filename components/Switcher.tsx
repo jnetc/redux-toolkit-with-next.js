@@ -54,15 +54,6 @@ export const Switcher: FC<{
 }> = ({ children, name, active = false, handler }) => {
   const [isSwitched, setIsSwitched] = useState(active);
 
-  // const switchTheme = () => {
-  //   let getTheme = document.documentElement.dataset.theme;
-  //   if (getTheme !== 'light') {
-  //     document.documentElement.setAttribute('data-theme', 'light');
-  //   } else {
-  //     document.documentElement.setAttribute('data-theme', 'dark');
-  //   }
-  // };
-
   const toggle = () => {
     setIsSwitched(!isSwitched);
     handler(!isSwitched);

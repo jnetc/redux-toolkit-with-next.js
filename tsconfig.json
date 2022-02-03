@@ -23,9 +23,7 @@
     "paths": {
       "@Components/*": ["./components/*"],
       "@Store": ["store"],
-      "@Styles/*": ["./styles/*"],
-      "@Types": ["types.ts"],
-      "@Themes": ["themes.ts"]
+      "@Styles/*": ["./styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
